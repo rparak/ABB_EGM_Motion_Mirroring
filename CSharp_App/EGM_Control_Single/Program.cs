@@ -18,7 +18,7 @@ using abb.egm;
 
     For more detailed information on EGMs, please refer to the application guide on the ABB website.
  */
-namespace EGM_Control_Example
+namespace EGM_Control_Single
 {
     public static class EGM_Stream_Data
     {
