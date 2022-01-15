@@ -1,4 +1,4 @@
- /****************************************************************************
+/****************************************************************************
 MIT License
 Copyright(c) 2021 Roman Parak
 Permission is hereby granted, free of charge, to any person obtaining a copy
