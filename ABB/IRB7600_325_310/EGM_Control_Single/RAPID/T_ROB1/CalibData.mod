@@ -1,3 +1,0 @@
-MODULE CalibData
-    PERS tooldata ABB_GRIPPER:=[TRUE,[[0,0,1000],[1,0,0,0]],[10,[0,0.001,267.303],[1,0,0,0],0,0,0]];
-ENDMODULE
