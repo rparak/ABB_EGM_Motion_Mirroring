@@ -53,12 +53,12 @@ MODULE Module1
     PROC EGM_CARTESIAN_MOVE()
         ! Description:                                       !
         ! Externally Guided motion (EGM) - Cartesian Control !
-    
+        
         ! Register an EGM id
         EGMGetId egm_id;
             
         ! Setup the EGM communication
-        EGMSetupUC ROB_2, egm_id, "default", "ROB_2", \Pose; 
+        EGMSetupUC ROB_1, egm_id, "default", "ROB_1", \Pose; 
             
         ! EGM While {Cartesian}
         WHILE TRUE DO
@@ -81,11 +81,10 @@ MODULE Module1
                        \MaxSpeedDeviation:=1000;
                         
             ! Start the EGM communication session
-            EGMRunPose egm_id, EGM_STOP_RAMP_DOWN, \X \Y \Z \Rx \Ry \Rz \CondTime:=0.1 \RampInTime:=0.1 \RampOutTime:=0.1 \PosCorrGain:=1.0;
-            ! Release the EGM id
-            !EGMReset egm_id;
+            EGMRunPose egm_id, EGM_STOP_HOLD, \X \Y \Z \Rx \Ry \Rz \CondTime:=0.1 \RampInTime:=0.1 \RampOutTime:=0.1 \PosCorrGain:=1.0;
+            
             ! Wait 2 seconds {No data from EGM sensor}
-            !WaitTime 2;
+            WaitTime 2;
         ENDWHILE
         
         ERROR

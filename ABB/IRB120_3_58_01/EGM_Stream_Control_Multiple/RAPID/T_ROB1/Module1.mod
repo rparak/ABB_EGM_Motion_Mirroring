@@ -105,12 +105,18 @@ MODULE Module1
     PROC Main()
         TEST actual_state
             CASE 0:
+                ! Release the EGM id.
+                EGMReset egm_id;
+                
                 ! Register an EGM id
                 EGMGetId egm_id;
+                
                 ! Setup the EGM communication
                 EGMSetupUC ROB_1, egm_id, "default", "ROB_1";
+                
                 ! Start the EGM communication session
                 EGMStreamStart egm_id \SampleRate:=4;
+                
                 actual_state := 1; 
             CASE 1:
                 ! Move to the starting position
