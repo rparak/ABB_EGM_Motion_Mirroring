@@ -33,6 +33,8 @@ import pandas as pd
 import numpy as np
 # Matplotlib (Visualization) [pip3 install matplotlib]
 import matplotlib.pyplot as plt
+# SciencePlots (Matplotlib styles for scientific plotting) [pip3 install SciencePlots]
+import scienceplots
 # OS (Operating system interfaces)
 import os
 
