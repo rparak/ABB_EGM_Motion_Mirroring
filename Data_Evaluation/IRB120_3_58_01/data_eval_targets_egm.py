@@ -43,9 +43,6 @@ def main():
     #   Path_Experiment_1_T1: Path with the same orientation.
     #   Path_Experiment_1_T2: Path with different orientation in the Z axis.
     #   Path_Experiment_1_T3: Path with different orientation in X, Y, Z axes.
-    #   Folders for individual tests:
-    #       Test_Path_Experiment_1_T1: Path with the same orientation.
-    #       Test_Path_Experiment_1_T2: Path with different orientation in the Z axis.
     RESULT_PATH_NAME  = 'Path_Experiment_1_T1'
     # Speed: 
     #   v40, v80, v150
