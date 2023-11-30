@@ -84,18 +84,21 @@ def main():
     desired_data = [desired_position, desired_velocity, desired_acceleration]
     ax_vector    = [0]*len(desired_data)
 
+    # Set the parameters for the scientific style.
+    plt.style.use(['science'])
+
     # Create figure with multiple subplots
     figure, (ax_vector) = plt.subplots(len(ax_vector), 1)
-    figure.suptitle(f'Path Name: {RESULT_PATH_NAME} (Interpolation)\n[Speed: {SPEED} mm/s & {SPEED} °/s, Zone: {ZONE}]', fontsize = 15)
+    figure.suptitle(f'Path Name: {RESULT_PATH_NAME} \n[Speed: {SPEED} mm/s $\&$ {SPEED} °/s, Zone: {ZONE}]', fontsize = 15)
 
-    AXIS_NAME = ['Position (mm)', 'Velocity (mm/s)', 'Acceleration (mm/s^2)']
+    AXIS_NAME = ['Position in mm', 'Velocity in mm/s', 'Acceleration in mm/$s^2$']
     for i, (ax, data) in enumerate(zip(ax_vector, desired_data)):
-        ax.plot(time, data[0], label=f'X - Axis')
-        ax.plot(time, data[1], label=f'Y - Axis')
-        ax.plot(time, data[2], label=f'Z - Axis')
-        ax.grid(linewidth = 0.75, linestyle = '--')
-        ax.set_xlabel(r'Time (ms)')
-        ax.set_ylabel(f'{AXIS_NAME[i]}')
+        ax.plot(time, data[0], label=r'x-axis')
+        ax.plot(time, data[1], label=r'y-axis')
+        ax.plot(time, data[2], label=r'z-axis')
+        ax.grid(which='major', linewidth = 0.15, linestyle = '--')
+        ax.set_xlabel(r'Time in milliseconds', fontsize=15, labelpad=10)
+        ax.set_ylabel(f'{AXIS_NAME[i]}', fontsize=15, labelpad=10)
         ax.legend()
 
     # Display the result

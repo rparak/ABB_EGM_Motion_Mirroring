@@ -67,18 +67,22 @@ def main():
     speed_vector = [orientation_speed, speed]
     ax_vector    = [0]*len(speed_vector)
 
+    # Set the parameters for the scientific style.
+    plt.style.use(['science'])
+
     # Create figure with multiple subplots
     figure, (ax_vector) = plt.subplots(len(ax_vector), 1)
-    figure.suptitle(f'Path Name: {RESULT_PATH_NAME} (Signal Analyzer)\n[Speed: {SPEED} mm/s & {SPEED} deg/s, Zone: {ZONE}]', fontsize = 15)
+    figure.suptitle(f'Path Name: {RESULT_PATH_NAME} (Signal Analyzer)\n[Speed: {SPEED} mm/s $\&$ {SPEED} °/s, Zone: {ZONE}]', fontsize = 15)
 
-    AXIS_NAME = ['Orientation Speed in Current Wobj (deg)', 'Speed in Current Wobj (mm)']
+    AXIS_NAME = ['Orientation Speed in Current Wobj in deg', 'Speed in Current Wobj in mm']
     for i, (ax, data) in enumerate(zip(ax_vector, speed_vector)):
         ax.set_ylim([np.minimum.reduce(data[1:-1]) - 1.0, 
                      np.maximum.reduce(data[1:-1]) + 1.0])
-        ax.plot(time[1:-1], data[1:-1])
-        ax.grid(linewidth = 0.75, linestyle = '--')
-        ax.set_xlabel(r'Time (s)')
-        ax.set_ylabel(f'{AXIS_NAME[i]}')
+        ax.plot(time[1:-1], data[1:-1], color=[0.2,0.4,0.6])
+        ax.grid(which='major', linewidth = 0.15, linestyle = '--')
+        ax.set_xlabel(r'Time in milliseconds', fontsize=15, labelpad=10)
+        ax.set_ylabel(f'{AXIS_NAME[i]}', fontsize=15, labelpad=10)
+        ax.legend()
 
     # Display the result
     plt.show()

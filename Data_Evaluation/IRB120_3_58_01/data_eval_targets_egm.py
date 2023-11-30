@@ -110,7 +110,7 @@ def main():
     if visible_actual_pos == True: axis.plot(actual_position[0], actual_position[1], actual_position[2], '-', color=[0.8,0.4,0], label=r'Actual Position')
 
     # Set parameters of the graph (plot).
-    axis.set_title(f'Path Name: {RESULT_PATH_NAME} \n[Speed: {SPEED} mm/s, Zone: {ZONE}]', fontsize=25, pad=25.0)
+    axis.set_title(f'Path Name: {RESULT_PATH_NAME} \n[Speed: {SPEED} mm/s $\&$ {SPEED} °/s, Zone: {ZONE}]', fontsize=25, pad=25.0)
     #   Limits.
     axis.set_xlim(np.minimum.reduce(desired_position[0]) - 50.0, np.maximum.reduce(desired_position[0]) + 50.0)
     axis.xaxis.pane.set_color((1.0, 1.0, 1.0, 1.0))

@@ -75,22 +75,25 @@ def main():
     desired_orientation = [egm_res_data['Q1_Desired'], egm_res_data['Q2_Desired'], egm_res_data['Q3_Desired'], egm_res_data['Q4_Desired']]
     actual_orientation  = [egm_res_data['Q1_Actual'], egm_res_data['Q2_Actual'], egm_res_data['Q3_Actual'], egm_res_data['Q4_Actual']]
 
+    # Set the parameters for the scientific style.
+    plt.style.use(['science'])
+
     if PLOT_DATA == 'Position':
         ax_vector = [0]*len(desired_position)
 
         # Create figure with multiple subplots
         figure, (ax_vector) = plt.subplots(len(ax_vector), 1)
-        figure.suptitle(f'Path Name: {RESULT_PATH_NAME} ({PLOT_DATA})\n[Speed: {SPEED} mm/s & {SPEED} °/s, Zone: {ZONE}]', fontsize = 15)
+        figure.suptitle(f'Path Name: {RESULT_PATH_NAME} ({PLOT_DATA})\n[Speed: {SPEED} mm/s $\&$ {SPEED} °/s, Zone: {ZONE}]', fontsize = 15)
 
-        AXIS_NAME = ['X', 'Y', 'Z']
+        AXIS_NAME = ['x', 'y', 'z']
         for i, (ax, desired, actual) in enumerate(zip(ax_vector, desired_position, actual_position)):
             ax.set_ylim([np.minimum.reduce([np.minimum.reduce(desired), np.minimum.reduce(actual)]) - 10.0, 
                          np.maximum.reduce([np.maximum.reduce(desired), np.maximum.reduce(actual)]) + 10.0])
-            ax.plot(time, desired, label=f'Desired {PLOT_DATA}')
-            ax.plot(time, actual, label=f'Actual {PLOT_DATA}')
-            ax.grid(linewidth = 0.75, linestyle = '--')
-            ax.set_xlabel(r'Time (ms)')
-            ax.set_ylabel(f'{AXIS_NAME[i]} - Position (mm)')
+            ax.plot(time, desired, color=[0.2,0.4,0.6], label=f'Desired {PLOT_DATA}')
+            ax.plot(time, actual, color=[0.8,0.4,0], label=f'Actual {PLOT_DATA}')
+            ax.grid(which='major', linewidth = 0.15, linestyle = '--')
+            ax.set_xlabel(r'Time in milliseconds', fontsize=15, labelpad=10)
+            ax.set_ylabel(f'{AXIS_NAME[i]}-pos. in mm', fontsize=15, labelpad=10)
             ax.legend()
 
     elif PLOT_DATA == 'Orientation':
@@ -98,17 +101,17 @@ def main():
 
         # Create figure with multiple subplots
         figure, (ax_vector) = plt.subplots(len(ax_vector), 1)
-        figure.suptitle(f'Path Name: {RESULT_PATH_NAME} ({PLOT_DATA})\n[Speed: {SPEED} mm/s & {SPEED} °/s, Zone: {ZONE}]', fontsize = 15)
+        figure.suptitle(f'Path Name: {RESULT_PATH_NAME} ({PLOT_DATA})\n[Speed: {SPEED} mm/s $\&$ {SPEED} °/s, Zone: {ZONE}]', fontsize = 15)
 
-        AXIS_NAME = ['Q1', 'Q2', 'Q3', 'Q4']
+        AXIS_NAME = ['q1', 'q2', 'q3', 'q4']
 
         for i, (ax, desired, actual) in enumerate(zip(ax_vector, desired_orientation, actual_orientation)):
             ax.set_ylim([-1.0 - 0.1, 1.0 + 0.1])
-            ax.plot(time, desired, label=f'Desired {PLOT_DATA}')
-            ax.plot(time, actual, label=f'Actual {PLOT_DATA}')
-            ax.grid(linewidth = 0.75, linestyle = '--')
-            ax.set_xlabel(r'Time (ms)')
-            ax.set_ylabel(f'{AXIS_NAME[i]} - Orientation (-)')
+            ax.plot(time, desired, color=[0.2,0.4,0.6], label=f'Desired {PLOT_DATA}')
+            ax.plot(time, actual, color=[0.8,0.4,0], label=f'Actual {PLOT_DATA}')
+            ax.grid(which='major', linewidth = 0.15, linestyle = '--')
+            ax.set_xlabel(r'Time in milliseconds', fontsize=15, labelpad=10)
+            ax.set_ylabel(f'{AXIS_NAME[i]}-orient. in (-)', fontsize=15, labelpad=10)
             ax.legend()
 
     # Display the result
