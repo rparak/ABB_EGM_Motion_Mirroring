@@ -1,3 +1,3 @@
-# ABB + EGM (Externally Guided Motion): Motion mirroring
+# Motion Mirroring of the ABB Robot Arm via EGM
 
 ...
