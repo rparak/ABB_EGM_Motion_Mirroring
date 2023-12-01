@@ -83,14 +83,14 @@ def main():
 
         # Create figure with multiple subplots
         figure, (ax_vector) = plt.subplots(len(ax_vector), 1)
-        figure.suptitle(f'Path Name: {RESULT_PATH_NAME} ({PLOT_DATA})\n[Speed: {SPEED} mm/s $\&$ {SPEED} °/s, Zone: {ZONE}]', fontsize = 15)
+        figure.suptitle(f'Path Name: {RESULT_PATH_NAME} ({PLOT_DATA})\n[Speed: {SPEED} mm/s $\&$ {SPEED} °/s, Zone: {ZONE}]', y=0.95, fontsize = 20)
 
         AXIS_NAME = ['x', 'y', 'z']
         for i, (ax, desired, actual) in enumerate(zip(ax_vector, desired_position, actual_position)):
             ax.set_ylim([np.minimum.reduce([np.minimum.reduce(desired), np.minimum.reduce(actual)]) - 10.0, 
                          np.maximum.reduce([np.maximum.reduce(desired), np.maximum.reduce(actual)]) + 10.0])
-            ax.plot(time, desired, color=[0.2,0.4,0.6], label=f'Desired {PLOT_DATA}')
-            ax.plot(time, actual, color=[0.8,0.4,0], label=f'Actual {PLOT_DATA}')
+            ax.plot(time, desired, color='#8ca8c5', label=f'Desired {PLOT_DATA}')
+            ax.plot(time, actual, color='#ffbf80', label=f'Actual {PLOT_DATA}')
             ax.grid(which='major', linewidth = 0.15, linestyle = '--')
             ax.set_xlabel(r'Time in milliseconds', fontsize=15, labelpad=10)
             ax.set_ylabel(f'{AXIS_NAME[i]}-pos. in mm', fontsize=15, labelpad=10)
@@ -101,14 +101,13 @@ def main():
 
         # Create figure with multiple subplots
         figure, (ax_vector) = plt.subplots(len(ax_vector), 1)
-        figure.suptitle(f'Path Name: {RESULT_PATH_NAME} ({PLOT_DATA})\n[Speed: {SPEED} mm/s $\&$ {SPEED} °/s, Zone: {ZONE}]', fontsize = 15)
+        figure.suptitle(f'Path Name: {RESULT_PATH_NAME} ({PLOT_DATA})\n[Speed: {SPEED} mm/s $\&$ {SPEED} °/s, Zone: {ZONE}]', y=0.95, fontsize = 20)
 
-        AXIS_NAME = ['q1', 'q2', 'q3', 'q4']
-
+        AXIS_NAME = [r'$q_{1}$', r'$q_{2}$', r'$q_{3}$', r'$q_{4}$']
         for i, (ax, desired, actual) in enumerate(zip(ax_vector, desired_orientation, actual_orientation)):
             ax.set_ylim([-1.0 - 0.1, 1.0 + 0.1])
-            ax.plot(time, desired, color=[0.2,0.4,0.6], label=f'Desired {PLOT_DATA}')
-            ax.plot(time, actual, color=[0.8,0.4,0], label=f'Actual {PLOT_DATA}')
+            ax.plot(time, desired, color='#8ca8c5', label=f'Desired {PLOT_DATA}')
+            ax.plot(time, actual, color='#ffbf80', label=f'Actual {PLOT_DATA}')
             ax.grid(which='major', linewidth = 0.15, linestyle = '--')
             ax.set_xlabel(r'Time in milliseconds', fontsize=15, labelpad=10)
             ax.set_ylabel(f'{AXIS_NAME[i]}-orient. in (-)', fontsize=15, labelpad=10)

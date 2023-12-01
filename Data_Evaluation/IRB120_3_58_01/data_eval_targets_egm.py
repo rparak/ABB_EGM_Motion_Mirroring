@@ -54,7 +54,7 @@ def main():
     ZONE  = 'z0'
 
     # Path visibility
-    visible_target, visible_desired_pos, visible_actual_pos = False, True, True
+    visible_target, visible_desired_pos, visible_actual_pos = True, True, True
 
     # Read Data from the File (EGM_Results Folder)
     current_directory_name = os.getcwd()
@@ -103,20 +103,20 @@ def main():
     axis   = figure.add_subplot(projection='3d')
 
     # Display of the connected path with landmarks
-    if visible_target == True: axis.plot(target_position[0], target_position[1], target_position[2], 'o', color=[0.0,0.0,0.0,1.0], label=r'Waypoints')
+    if visible_target == True: axis.plot(target_position[0], target_position[1], target_position[2], 'o', color='#d0d0d0', label=r'Waypoints')
     # Display Desired position (X, Y, Z)
-    if visible_desired_pos == True: axis.plot(desired_position[0], desired_position[1], desired_position[2], '-', color=[0.2,0.4,0.6], label=r'Desired Position')
+    if visible_desired_pos == True: axis.plot(desired_position[0], desired_position[1], desired_position[2], '-', color='#8ca8c5', label=r'Desired Position')
     # Display Actual position (X, Y, Z)
-    if visible_actual_pos == True: axis.plot(actual_position[0], actual_position[1], actual_position[2], '-', color=[0.8,0.4,0], label=r'Actual Position')
+    if visible_actual_pos == True: axis.plot(actual_position[0], actual_position[1], actual_position[2], '-', color='#ffbf80', label=r'Actual Position')
 
     # Set parameters of the graph (plot).
-    axis.set_title(f'Path Name: {RESULT_PATH_NAME} \n[Speed: {SPEED} mm/s $\&$ {SPEED} °/s, Zone: {ZONE}]', fontsize=25, pad=25.0)
+    axis.set_title(f'Path Name: {RESULT_PATH_NAME} \n[Speed: {SPEED} mm/s $\&$ {SPEED} °/s, Zone: {ZONE}]', y=1.0, fontsize=20, pad=25.0)
     #   Limits.
-    axis.set_xlim(np.minimum.reduce(desired_position[0]) - 50.0, np.maximum.reduce(desired_position[0]) + 50.0)
+    axis.set_xlim(np.minimum.reduce(desired_position[0]) - 25.0, np.maximum.reduce(desired_position[0]) + 25.0)
     axis.xaxis.pane.set_color((1.0, 1.0, 1.0, 1.0))
-    axis.set_ylim(np.minimum.reduce(desired_position[1]) - 50.0, np.maximum.reduce(desired_position[1]) + 50.0)
+    axis.set_ylim(np.minimum.reduce(desired_position[1]) - 25.0, np.maximum.reduce(desired_position[1]) + 25.0)
     axis.yaxis.pane.set_color((1.0, 1.0, 1.0, 1.0))
-    axis.set_zlim(np.minimum.reduce(desired_position[2]) - 50.0, np.maximum.reduce(desired_position[2]) + 50.0)
+    axis.set_zlim(np.minimum.reduce(desired_position[2]) - 25.0, np.maximum.reduce(desired_position[2]) + 25.0)
     axis.zaxis.pane.set_color((1.0, 1.0, 1.0, 1.0))
     #   Label.
     axis.set_xlabel(r'x-position in millimeters', fontsize=15, labelpad=10); axis.set_ylabel(r'y-position in millimeters', fontsize=15, labelpad=10) 

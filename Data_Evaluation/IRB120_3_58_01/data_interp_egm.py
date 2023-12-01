@@ -89,7 +89,7 @@ def main():
 
     # Create figure with multiple subplots
     figure, (ax_vector) = plt.subplots(len(ax_vector), 1)
-    figure.suptitle(f'Path Name: {RESULT_PATH_NAME} \n[Speed: {SPEED} mm/s $\&$ {SPEED} °/s, Zone: {ZONE}]', fontsize = 15)
+    figure.suptitle(f'Path Name: {RESULT_PATH_NAME} \n[Speed: {SPEED} mm/s $\&$ {SPEED} °/s, Zone: {ZONE}]', y=0.95, fontsize = 20)
 
     AXIS_NAME = ['Position in mm', 'Velocity in mm/s', 'Acceleration in mm/$s^2$']
     for i, (ax, data) in enumerate(zip(ax_vector, desired_data)):
