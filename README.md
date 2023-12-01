@@ -1,4 +1,3 @@
-# ABB_EGM_CSharp
+# ABB + EGM (Externally Guided Motion): Motion mirroring
 
-Finish this week!
-\Motion mirroring
+...
