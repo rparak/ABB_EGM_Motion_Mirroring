@@ -81,8 +81,29 @@ Description:
 
 ## Data Evaluation
 
+**EGM Cartesian Position / Orientation in 2D:**
+
 <p align="center">
-<img src=https://github.com/rparak/ABB_EGM_Motion_Mirroring/blob/main/images/Data_Evaluation/EGM_Pos_1_T1.svg width="800" height="450">
+   <img src=https://github.com/rparak/ABB_EGM_Motion_Mirroring/blob/main/images/Data_Evaluation/EGM_Pos_1_T1.svg width="800" height="450">
+   <img src=https://github.com/rparak/ABB_EGM_Motion_Mirroring/blob/main/images/Data_Evaluation/EGM_Orient_1_T1.svg width="800" height="450">
+</p>
+
+**EGM Cartesian Position / Orientation in 3D:**
+
+<p align="center">
+   <img src=https://github.com/rparak/ABB_EGM_Motion_Mirroring/blob/main/images/Data_Evaluation/Targets_1_T1.svg width="800" height="450">
+</p>
+
+**Signal Analyzer:**
+
+<p align="center">
+   <img src=https://github.com/rparak/ABB_EGM_Motion_Mirroring/blob/main/images/Data_Evaluation/Signal_A_1_T1.svg width="800" height="450">
+</p>
+
+**Expression of Velocity and Acceleration**
+
+<p align="center">
+   <img src=https://github.com/rparak/ABB_EGM_Motion_Mirroring/blob/main/images/Data_Evaluation/Interp_1_T1.svg width="800" height="450">
 </p>
 
 ## Contact Info
