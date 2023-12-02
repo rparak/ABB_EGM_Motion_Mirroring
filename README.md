@@ -71,7 +71,7 @@ Description:
 ## Data Evaluation
 
 <p align="center">
-<img src=https://github.com/rparak/UR10e_Robotic_Teleoperation/blob/main/images/Data_Evaluation/EGM_Pos_1_T1.svg width="800" height="450">
+<img src=https://github.com/rparak/ABB_EGM_Motion_Mirroring/blob/main/images/Data_Evaluation/EGM_Pos_1_T1.svg width="800" height="450">
 </p>
 
 ## Contact Info
