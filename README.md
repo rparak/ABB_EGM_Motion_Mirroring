@@ -1,6 +1,6 @@
 # Motion Mirroring of the ABB Robot Arm via EGM
 
-## Requirements:
+## Requirements
 
 **Software:**
 ```bash
@@ -27,7 +27,7 @@ Windows
 | --------------------- | ------------------------------------------------------------------------------------- |
 | ABB RobotStudio       | https://new.abb.com/products/robotics/robotstudio/downloads                           |
 
-## Project Description:
+## Project Description
 
 **WARNING: To control the robot in the real world, it is necessary to disable the firewall.**
 
@@ -52,7 +52,7 @@ Link: [Protobuf Code Generator and Parser](https://protogen.marcgravell.com)
 5. In the Virtual Controller page, select the RobotWare version and then click Locations to access the RobotWare Add-in and Media pool folders. Optionally, select the check box to automatically restore backup. Click Next.
 6. In the Ready to unpack page, review the information and then click Finish.
    
-## Project Hierarchy:
+## Project Hierarchy
 
 ```bash
 [/CSharp_App/../Egm.cs]
@@ -67,6 +67,12 @@ Description:
 Description:
   The egm.proto -file.
 ```
+
+## Data Evaluation
+
+<p align="center">
+<img src=https://github.com/rparak/UR10e_Robotic_Teleoperation/blob/main/images/Data_Evaluation/EGM_Pos_1_T1.svg width="800" height="450">
+</p>
 
 ## Contact Info
 Roman.Parak@outlook.com
