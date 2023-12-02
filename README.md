@@ -81,6 +81,8 @@ Description:
 
 ## Data Evaluation
 
+The results of the analysis for experiment type 1 (Path_Experiment_1_T1) with velocity v40 and zone z0.
+
 **EGM Cartesian Position / Orientation in 2D:**
 
 <p align="center">
