@@ -1,7 +1,7 @@
 # Motion Mirroring of the ABB Robot Arm via EGM
 
 <p align="center">
-   <img src=https://github.com/rparak/ABB_EGM_Motion_Mirroring/blob/main/images/ABB_RobotStudio_Env.png width="800" height="450">
+   <img src=https://github.com/rparak/ABB_EGM_Motion_Mirroring/blob/main/images/ABB_RobotStudio_Env.png width="800" height="400">
 </p>
 
 ## Requirements
