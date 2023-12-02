@@ -62,7 +62,9 @@ Link: [Protobuf Code Generator and Parser](https://protogen.marcgravell.com)
 4. In the Library handling page select the target library. Two options are available, Load files from local PC or Load files from Pack & Go. Click the option to select the location for loading the required files, and click Next.
 5. In the Virtual Controller page, select the RobotWare version and then click Locations to access the RobotWare Add-in and Media pool folders. Optionally, select the check box to automatically restore backup. Click Next.
 6. In the Ready to unpack page, review the information and then click Finish.
-   
+
+The project was realized at the Institute of Robotics, Johannes Kepler University in Linz as part of an Erasmus+ research internship.
+
 ## Project Hierarchy
 
 ```bash
