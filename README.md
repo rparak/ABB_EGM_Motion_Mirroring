@@ -33,7 +33,7 @@ Windows
 
 ## Project Description
 
-Motion mirroring in the motion planning of an articulated robotic arm through the use of Externally Guided Motion (EGM) within ABB RobotStudio. The program utilizes the User Datagram Protocol (UDP) to control and analyze data.
+Motion mirroring in the motion planning of an articulated robotic arm through the use of Externally Guided Motion (EGM) within ABB RobotStudio. The program utilizes the User Datagram Protocol (UDP) to control and analyze data. The goal was to create a path in the 'Master' robot and mirror that path with the 'Slave' robot. This process can be used, for example, for path correction or other tasks. As an open-source project, it can be applied to various tasks, as creativity knows no limits.
 
 The project was realized at the Institute of Robotics, Johannes Kepler University in Linz as part of an Erasmus+ research internship.
 
