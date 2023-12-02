@@ -1,7 +1,7 @@
 # Motion Mirroring of the ABB Robot Arm via EGM
 
 <p align="center">
-   <img src=https://github.com/rparak/ABB_EGM_Motion_Mirroring/blob/main/images/ABB_RobotStudio_Env.png width="800" height="400">
+   <img src=https://github.com/rparak/ABB_EGM_Motion_Mirroring/blob/main/images/EGM.png width="800" height="400">
 </p>
 
 ## Requirements
@@ -49,6 +49,10 @@ The project was realized at the Institute of Robotics, Johannes Kepler Universit
 | UDPUC | 6512  |
 
 **WARNING: To control the robot in the real world, it is necessary to disable the firewall.**
+
+<p align="center">
+   <img src=https://github.com/rparak/ABB_EGM_Motion_Mirroring/blob/main/images/ABB_RobotStudio_Env.png width="800" height="400">
+</p>
 
 **Notes:**
 
